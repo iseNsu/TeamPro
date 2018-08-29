@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//src/main/java=UTF8
+encoding//src/main/java/com/nsu/ise/core/common/ExcelCreate.java=UTF-8
+encoding//src/main/java/com/nsu/ise/core/common/ExcelErrorCreate.java=UTF-8
+encoding//src/main/java/com/nsu/ise/core/common/ExcelHelper.java=UTF-8
+encoding//src/main/java/com/nsu/ise/core/common/ExceptionInterceptor.java=UTF-8
+encoding//src/main/java/com/nsu/ise/core/util/MD5.java=UTF-8
+encoding//src/main/resources=UTF-8
+encoding//src/test/java=UTF8
+encoding//src/test/resources=UTF-8
+encoding/<project>=UTF-8

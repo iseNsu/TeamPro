@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="wrs-default" extends="javadev-default">
+		<interceptors>
+			<interceptor-stack name="javadevDefaultStack">
+				<interceptor-ref name="servletConfig" />
+				<interceptor-ref name="login" />
+				<!-- cj here 用户访问统计拦截器，暂时屏蔽
+				<interceptor-ref name="visitStat" />
+				-->
+				<interceptor-ref name="exception" />				
+				<interceptor-ref name="staticParams" />
+				<interceptor-ref name="params" />
+			</interceptor-stack>
+		</interceptors>
+		<global-results>
+			<result name="login" type="redirect">/loginView.action</result>
+		</global-results>
+	</package>
+
+	<include file="struts/wrs-ROOT.xml" />
+	<include file="struts/wrs-score.xml" />
+</struts>

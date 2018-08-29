@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">    
+
+<struts>
+	<package name="wrs-ROOT" extends="wrs-default" namespace="/">
+		<action name="loginView" class="commonAnonymousAction">
+			<result>login_view.ftl</result>
+		</action>
+		<action name="code" class="commonAnonymousAction" method="getCode">
+			
+		</action>
+		<action name="login" class="userAction" method="login">
+			<result type="redirect">${indexUrl}</result>
+			<result name="homepageOfStudent" type="redirect">/score/score!scoreList.action</result>	
+			<result name="homepageOfTeacher" type="redirect">/score/project!projectList.action</result>				
+			<result name="error">login_view.ftl</result>
+		</action>
+		<action name="logout" class="userAction" method="logout">
+			<result type="redirect">/loginView.action</result>
+		</action>	
+		<action name="changePassView" class="userAction" method="viewChangePass">
+			<result>change_password.ftl</result>
+		</action>
+		<action name="changePass" class="userAction" method="changePass">
+		</action>	
+	</package>
+</struts>
